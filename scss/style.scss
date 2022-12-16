@@ -1,0 +1,76 @@
+/* reset */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+// import de archivos secundarios
+
+@import "utilidades/mixin";
+@import "utilidades/variables";
+@import "HTML/index";
+@import "HTML/esports";
+@import "HTML/IntroYSN";
+@import "HTML/contacto";
+
+
+
+/* estilo de fuente */
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+/* barra de navegacion */
+#navbar{
+    height: 100px;
+    background-color:$color-gris;
+    @include tablet{
+        height: 100%;
+		padding: 20px;
+    }
+    .contenedor{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 100%;
+        @include cont;
+        @include tablet{
+            flex-direction: column;
+        }
+        .logo{
+            a{              
+                img{
+                    height: 80px;
+                    @include tablet{
+                        margin-bottom: 20px;
+                    }
+                }
+            }
+        }
+        ul{
+            list-style: none;
+            display: flex;
+            @include mobile{
+                display: flex;
+		        align-items: center;
+		        flex-direction: column;
+		        gap: 2rem;
+            }
+            li{
+                margin-left: 20px;
+                a{
+                    color: $color-negro;
+                    text-transform: uppercase;
+                    font-size: 18px;
+                    font-weight: 600;
+                    text-decoration: none;
+                    &:hover{
+                        color:$color-boton;
+                    }
+                }
+            }
+        }
+    }
+}
+
+

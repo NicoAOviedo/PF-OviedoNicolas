@@ -1,0 +1,75 @@
+/* Index */
+
+header{
+    #presentacion{
+        padding: 80px 0;
+        @include tablet{
+            padding: 30px 0;
+            text-align: center;
+        }
+        .contenedor{
+            @include cont;
+            .presentacion-flex{
+                display: flex;
+                @include tablet{
+                    flex-direction: column;
+                }
+                .forma-1{
+                    @include TIndex;
+                }
+                p{
+                    @include BIndex;
+                }
+            }
+        }
+    }
+}
+
+.carrusel{
+    @include mobile{
+        display: none;
+    }
+}
+
+#cambios , .fondo-gray{
+    padding: 80px 0;
+    background:$color-gris;
+    @include tablet{
+        padding: 30px 0;
+    }
+    .contenedor{
+        @include cont;
+        .wrap{
+            @include Grid;
+            @include tablet{
+                grid-template-columns: repeat(1,1fr);
+            }
+            .caja , .caja-1 , .fondo-black{
+                @include caja;
+                grid-column: 1/4;
+                background-color:$color-negro;
+                color:$color-blanco;
+                @include tablet{
+                    grid-column: 1;
+                    grid-row: 1;
+                }
+                .forma-3{
+                    font-size: 2rem;
+                }
+            }
+            .caja-2 , .fondo-white{
+                @include caja;
+                grid-column: 4/6;
+                background:$color-blanco;
+                color: $color-negro;
+                @include tablet{
+                    grid-column: 1;
+                    grid-row: 2;
+                }
+                .forma-3{
+                    font-size: 2rem;
+                }
+            }
+        }
+    }
+}

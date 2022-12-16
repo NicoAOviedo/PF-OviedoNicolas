@@ -1,0 +1,33 @@
+
+/* Contacto */
+#contacto , .fondo-black{
+    padding: 80px 0;
+    background:$color-negro;
+	color:$color-blanco;
+    @include tablet{
+        padding: 30px 0;
+        text-align: 10px 0;
+    }
+    .contenedor{       
+        @include cont;
+        .contacto-flex{
+            display: flex;
+	        gap: 20px;
+	        padding: 50px 0;
+            @include tablet{
+                flex-direction: column;
+                padding: 10px 0;
+            }
+            .contacto-flex-box{
+                padding: 40px;
+	            background: $color-blanco;
+	            color:$color-negro;
+                .logo{
+                    img{
+                        height: 60px;
+                    }
+                }
+            }
+        }
+    }
+}

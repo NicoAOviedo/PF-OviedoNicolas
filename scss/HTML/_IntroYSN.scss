@@ -1,0 +1,29 @@
+/* Introduccion y Sobre Nosotros */
+#SN , .fondo-black{
+    padding: 80px 0;
+    background: $color-negro;
+	color:$color-blanco;
+    @include tablet{
+        padding: 30px 0;
+        text-align: center;
+    }
+    .contenedor{
+        @include cont;
+        h1{
+            padding-bottom: 20px;
+        }
+        p{
+            padding-bottom: 20px;
+            width: 60%;
+            @include tablet{
+                width: 100%;
+            }
+        }
+    }
+}
+
+.ancho-video{
+    @include mobile{
+        width: 375px;
+    }
+}
